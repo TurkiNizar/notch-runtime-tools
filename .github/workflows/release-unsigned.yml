@@ -20,11 +20,13 @@ jobs:
 
       - name: Build App
         run: |
-          xcodebuild archive \
+          xcodebuild \
+            -project NotchRuntimeToolsForDevs.xcodeproj \
             -scheme NotchRuntimeToolsForDevs \
             -configuration Release \
-            -archivePath build/NotchRuntimeToolsForDevs.xcarchive
-          cp -R build/NotchRuntimeToolsForDevs.xcarchive/Products/Applications/NotchRuntimeToolsForDevs.app .
+            -derivedDataPath build
+          APP_PATH="build/Build/Products/Release/NotchRuntimeToolsForDevs.app"
+          cp -R "$APP_PATH" .
           zip -ry NotchRuntimeToolsForDevelopers-${VERSION}.zip NotchRuntimeToolsForDevs.app
 
       - name: Create Release
