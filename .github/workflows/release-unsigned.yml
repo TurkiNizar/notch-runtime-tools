@@ -15,8 +15,8 @@ jobs:
 
       - name: Build CLI
         run: |
-          swift build -c release
-          tar czf notch-build-${VERSION}-macos.tar.gz -C .build/release notch-build
+          swiftc notch-build.swift -o notch-build
+          tar czf notch-build-${VERSION}-macos.tar.gz notch-build
 
       - name: Build App
         run: |
