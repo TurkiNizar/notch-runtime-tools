@@ -44,8 +44,5 @@ jobs:
             NotchRuntimeToolsForDevelopers-${VERSION}.zip
           draft: false
           prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-          draft: false
-          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
