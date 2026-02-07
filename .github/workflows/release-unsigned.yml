@@ -22,26 +22,20 @@ jobs:
           tar czf notch-build-${VERSION}-macos.tar.gz notch-build
           ls -l notch-build-${VERSION}-macos.tar.gz
 
-      - name: Build App
+      - name: Build App (archive)
         run: |
           xcodebuild \
             -project NotchRuntimeToolsForDevs.xcodeproj \
             -scheme NotchRuntimeToolsForDevs \
             -configuration Release \
-            -sdk macosx \
-            -destination "platform=macOS,arch=arm64" \
-            SYMROOT=$(pwd)/build
-          echo "Built products:"
-          find build -type d -name "*.app" -print
-          APP_PATH="build/Release/NotchRuntimeToolsForDevs.app"
-          EXEC_PATH=""
-          if [ -x "$APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs" ]; then
-            EXEC_PATH="$APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs"
-          elif [ -x "$APP_PATH/NotchRuntimeToolsForDevs" ]; then
-            EXEC_PATH="$APP_PATH/NotchRuntimeToolsForDevs"
-          fi
-          if [ -z "$EXEC_PATH" ]; then
-            echo "App executable missing in bundle:"
+            -destination "platform=macOS" \
+            -archivePath build/NotchRuntimeToolsForDevs.xcarchive \
+            archive
+          APP_PATH="build/NotchRuntimeToolsForDevs.xcarchive/Products/Applications/NotchRuntimeToolsForDevs.app"
+          echo "Built app bundle at: $APP_PATH"
+          find build/NotchRuntimeToolsForDevs.xcarchive -maxdepth 3 -type d -name "*.app" -print
+          if [ ! -x "$APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs" ]; then
+            echo "App executable missing at $APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs"
             ls -R "$APP_PATH" || true
             exit 1
           fi
