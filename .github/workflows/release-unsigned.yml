@@ -2,6 +2,7 @@ name: Release (unsigned)
 
 on:
   push:
+    branches: ["main"]
     tags: ["v*"]
 
 jobs:
