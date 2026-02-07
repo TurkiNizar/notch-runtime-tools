@@ -29,9 +29,18 @@ jobs:
             -scheme NotchRuntimeToolsForDevs \
             -configuration Release \
             -derivedDataPath build
-          APP_PATH="build/Build/Products/Release/NotchRuntimeToolsForDevs.app"
-          if [ ! -x "$APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs" ]; then
-            echo "App executable missing at $APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs" && exit 1
+          echo "Built products:"
+          find build/Build/Products/Release -maxdepth 2 -type d -name "*.app" -print
+          APP_PATH=$(find build/Build/Products/Release -maxdepth 1 -type d -name "*.app" | head -n1)
+          if [ -z "$APP_PATH" ]; then
+            echo "No app bundle found in build/Build/Products/Release" && exit 1
+          fi
+          EXEC_NAME=$(basename "$APP_PATH" .app)
+          EXEC_PATH="$APP_PATH/Contents/MacOS/$EXEC_NAME"
+          if [ ! -x "$EXEC_PATH" ]; then
+            echo "App executable missing at $EXEC_PATH"
+            ls -l "$APP_PATH/Contents/MacOS" || true
+            exit 1
           fi
           /usr/bin/ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" NotchRuntimeToolsForDevelopers-${VERSION}.zip
           ls -l NotchRuntimeToolsForDevelopers-${VERSION}.zip
