@@ -36,13 +36,11 @@ jobs:
           zip -ry NotchRuntimeToolsForDevelopers-${VERSION}.zip "$APP_PATH"
           ls -l NotchRuntimeToolsForDevelopers-${VERSION}.zip
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
+      - name: Create Release and Upload Assets
+        uses: ncipollo/release-action@v1
         with:
-          files: |
-            notch-build-${VERSION}-macos.tar.gz
-            NotchRuntimeToolsForDevelopers-${VERSION}.zip
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ env.VERSION }}
+          name: ${{ env.VERSION }}
+          artifacts: "notch-build-${VERSION}-macos.tar.gz,NotchRuntimeToolsForDevelopers-${VERSION}.zip"
+          generateReleaseNotes: true
+          token: ${{ secrets.GITHUB_TOKEN }}
