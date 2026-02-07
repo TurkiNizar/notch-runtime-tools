@@ -28,18 +28,12 @@ jobs:
             -project NotchRuntimeToolsForDevs.xcodeproj \
             -scheme NotchRuntimeToolsForDevs \
             -configuration Release \
-            -destination "platform=macOS" \
-            -derivedDataPath build
+            SYMROOT=$(pwd)/build
           echo "Built products:"
-          find build/Build/Products/Release -maxdepth 2 -type d -name "*.app" -print
-          APP_PATH=$(find build/Build/Products/Release -maxdepth 1 -type d -name "*.app" | head -n1)
-          if [ -z "$APP_PATH" ]; then
-            echo "No app bundle found in build/Build/Products/Release" && exit 1
-          fi
-          EXEC_NAME=$(basename "$APP_PATH" .app)
-          EXEC_PATH="$APP_PATH/Contents/MacOS/$EXEC_NAME"
-          if [ ! -x "$EXEC_PATH" ]; then
-            echo "App executable missing at $EXEC_PATH"
+          find build -type d -name "*.app" -print
+          APP_PATH="build/Release/NotchRuntimeToolsForDevs.app"
+          if [ ! -x "$APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs" ]; then
+            echo "App executable missing at $APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs"
             ls -l "$APP_PATH/Contents/MacOS" || true
             exit 1
           fi
