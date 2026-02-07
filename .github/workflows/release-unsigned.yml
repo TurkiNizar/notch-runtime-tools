@@ -28,6 +28,7 @@ jobs:
             -project NotchRuntimeToolsForDevs.xcodeproj \
             -scheme NotchRuntimeToolsForDevs \
             -configuration Release \
+            -destination "platform=macOS" \
             -derivedDataPath build
           echo "Built products:"
           find build/Build/Products/Release -maxdepth 2 -type d -name "*.app" -print
