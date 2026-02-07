@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		84EDA5CA2F35D7FB008374AB /* NotchRuntimeToolsForDevs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotchRuntimeToolsForDevs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		84EDA6292F37AB1E008374AB /* NotchRuntimeToolsForDevs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = NotchRuntimeToolsForDevs.xcodeproj; sourceTree = "<group>"; };
+		84EDA6172F37AB1C008374AB /* NotchRuntimeToolsForDevs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotchRuntimeToolsForDevs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		84EDA6D22F37ADFC008374AB /* Exceptions for "NotchRuntimeToolsForDevs" folder in "NotchRuntimeToolsForDevs" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"notch-build.swift",
+			);
+			target = 84EDA6162F37AB1C008374AB /* NotchRuntimeToolsForDevs */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		84EDA5CC2F35D7FB008374AB /* NotchRuntimeToolsForDevs */ = {
+		84EDA6192F37AB1C008374AB /* NotchRuntimeToolsForDevs */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				84EDA6D22F37ADFC008374AB /* Exceptions for "NotchRuntimeToolsForDevs" folder in "NotchRuntimeToolsForDevs" target */,
+			);
 			path = NotchRuntimeToolsForDevs;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		84EDA5C72F35D7FB008374AB /* Frameworks */ = {
+		84EDA6142F37AB1C008374AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,25 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84EDA5C12F35D7FB008374AB = {
+		84EDA60E2F37AB1C008374AB = {
 			isa = PBXGroup;
 			children = (
-				84EDA5CC2F35D7FB008374AB /* NotchRuntimeToolsForDevs */,
-				84EDA5CB2F35D7FB008374AB /* Products */,
+				84EDA6192F37AB1C008374AB /* NotchRuntimeToolsForDevs */,
+				84EDA6182F37AB1C008374AB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		84EDA5CB2F35D7FB008374AB /* Products */ = {
+		84EDA6182F37AB1C008374AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84EDA5CA2F35D7FB008374AB /* NotchRuntimeToolsForDevs.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		84EDA62A2F37AB1E008374AB /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				84EDA6172F37AB1C008374AB /* NotchRuntimeToolsForDevs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,70 +61,65 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84EDA5C92F35D7FB008374AB /* NotchRuntimeToolsForDevs */ = {
+		84EDA6162F37AB1C008374AB /* NotchRuntimeToolsForDevs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84EDA5D52F35D7FC008374AB /* Build configuration list for PBXNativeTarget "NotchRuntimeToolsForDevs" */;
+			buildConfigurationList = 84EDA6222F37AB1E008374AB /* Build configuration list for PBXNativeTarget "NotchRuntimeToolsForDevs" */;
 			buildPhases = (
-				84EDA5C62F35D7FB008374AB /* Sources */,
-				84EDA5C72F35D7FB008374AB /* Frameworks */,
-				84EDA5C82F35D7FB008374AB /* Resources */,
+				84EDA6132F37AB1C008374AB /* Sources */,
+				84EDA6142F37AB1C008374AB /* Frameworks */,
+				84EDA6152F37AB1C008374AB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				84EDA5CC2F35D7FB008374AB /* NotchRuntimeToolsForDevs */,
+				84EDA6192F37AB1C008374AB /* NotchRuntimeToolsForDevs */,
 			);
 			name = NotchRuntimeToolsForDevs;
 			packageProductDependencies = (
 			);
 			productName = NotchRuntimeToolsForDevs;
-			productReference = 84EDA5CA2F35D7FB008374AB /* NotchRuntimeToolsForDevs.app */;
+			productReference = 84EDA6172F37AB1C008374AB /* NotchRuntimeToolsForDevs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		84EDA5C22F35D7FB008374AB /* Project object */ = {
+		84EDA60F2F37AB1C008374AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					84EDA5C92F35D7FB008374AB = {
+					84EDA6162F37AB1C008374AB = {
 						CreatedOnToolsVersion = 26.2;
+						LastSwiftMigration = 2620;
 					};
 				};
 			};
-			buildConfigurationList = 84EDA5C52F35D7FB008374AB /* Build configuration list for PBXProject "NotchRuntimeToolsForDevs" */;
+			buildConfigurationList = 84EDA6122F37AB1C008374AB /* Build configuration list for PBXProject "NotchRuntimeToolsForDevs" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 84EDA5C12F35D7FB008374AB;
+			mainGroup = 84EDA60E2F37AB1C008374AB;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 84EDA5CB2F35D7FB008374AB /* Products */;
+			productRefGroup = 84EDA6182F37AB1C008374AB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 84EDA62A2F37AB1E008374AB /* Products */;
-					ProjectRef = 84EDA6292F37AB1E008374AB /* NotchRuntimeToolsForDevs.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				84EDA5C92F35D7FB008374AB /* NotchRuntimeToolsForDevs */,
+				84EDA6162F37AB1C008374AB /* NotchRuntimeToolsForDevs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		84EDA5C82F35D7FB008374AB /* Resources */ = {
+		84EDA6152F37AB1C008374AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,7 +129,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		84EDA5C62F35D7FB008374AB /* Sources */ = {
+		84EDA6132F37AB1C008374AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -139,7 +139,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		84EDA5D32F35D7FC008374AB /* Debug */ = {
+		84EDA6202F37AB1E008374AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -202,7 +202,7 @@
 			};
 			name = Debug;
 		};
-		84EDA5D42F35D7FC008374AB /* Release */ = {
+		84EDA6212F37AB1E008374AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,11 +257,13 @@
 			};
 			name = Release;
 		};
-		84EDA5D62F35D7FC008374AB /* Debug */ = {
+		84EDA6232F37AB1E008374AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -292,16 +294,19 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		84EDA5D72F35D7FC008374AB /* Release */ = {
+		84EDA6242F37AB1E008374AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -340,25 +345,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84EDA5C52F35D7FB008374AB /* Build configuration list for PBXProject "NotchRuntimeToolsForDevs" */ = {
+		84EDA6122F37AB1C008374AB /* Build configuration list for PBXProject "NotchRuntimeToolsForDevs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84EDA5D32F35D7FC008374AB /* Debug */,
-				84EDA5D42F35D7FC008374AB /* Release */,
+				84EDA6202F37AB1E008374AB /* Debug */,
+				84EDA6212F37AB1E008374AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84EDA5D52F35D7FC008374AB /* Build configuration list for PBXNativeTarget "NotchRuntimeToolsForDevs" */ = {
+		84EDA6222F37AB1E008374AB /* Build configuration list for PBXNativeTarget "NotchRuntimeToolsForDevs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84EDA5D62F35D7FC008374AB /* Debug */,
-				84EDA5D72F35D7FC008374AB /* Release */,
+				84EDA6232F37AB1E008374AB /* Debug */,
+				84EDA6242F37AB1E008374AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 84EDA5C22F35D7FB008374AB /* Project object */;
+	rootObject = 84EDA60F2F37AB1C008374AB /* Project object */;
 }
