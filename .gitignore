@@ -1,0 +1,7 @@
+CONTEXT.md
+.DS_Store
+NotchRuntimeToolsForDevs.xcodeproj/xcuserdata
+NotchRuntimeToolsForDevs/NotchRuntimeToolsForDevs.xcodeproj/xcuserdata
+*.xcuserstate
+# Ignore user data and shared data by default
+NotchRuntimeToolsForDevs/NotchRuntimeToolsForDevs.xcodeproj/xcshareddata
