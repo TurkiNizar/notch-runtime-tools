@@ -20,6 +20,7 @@ jobs:
         run: |
           swiftc notch-build.swift -o notch-build
           tar czf notch-build-${VERSION}-macos.tar.gz notch-build
+          ls -l notch-build-${VERSION}-macos.tar.gz
 
       - name: Build App
         run: |
@@ -33,6 +34,7 @@ jobs:
             echo "App not found at $APP_PATH" && exit 1
           fi
           zip -ry NotchRuntimeToolsForDevelopers-${VERSION}.zip "$APP_PATH"
+          ls -l NotchRuntimeToolsForDevelopers-${VERSION}.zip
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
@@ -40,6 +42,9 @@ jobs:
           files: |
             notch-build-${VERSION}-macos.tar.gz
             NotchRuntimeToolsForDevelopers-${VERSION}.zip
+          draft: false
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
           draft: false
           prerelease: false
         env:
