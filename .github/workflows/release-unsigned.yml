@@ -30,8 +30,8 @@ jobs:
             -configuration Release \
             -derivedDataPath build
           APP_PATH="build/Build/Products/Release/NotchRuntimeToolsForDevs.app"
-          if [ ! -d "$APP_PATH" ]; then
-            echo "App not found at $APP_PATH" && exit 1
+          if [ ! -x "$APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs" ]; then
+            echo "App executable missing at $APP_PATH/Contents/MacOS/NotchRuntimeToolsForDevs" && exit 1
           fi
           /usr/bin/ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" NotchRuntimeToolsForDevelopers-${VERSION}.zip
           ls -l NotchRuntimeToolsForDevelopers-${VERSION}.zip
