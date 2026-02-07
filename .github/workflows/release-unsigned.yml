@@ -41,6 +41,6 @@ jobs:
         with:
           tag: ${{ env.VERSION }}
           name: ${{ env.VERSION }}
-          artifacts: "notch-build-${VERSION}-macos.tar.gz,NotchRuntimeToolsForDevelopers-${VERSION}.zip"
+          artifacts: "notch-build-${{ env.VERSION }}-macos.tar.gz,NotchRuntimeToolsForDevelopers-${{ env.VERSION }}.zip"
           generateReleaseNotes: true
           token: ${{ secrets.GITHUB_TOKEN }}
